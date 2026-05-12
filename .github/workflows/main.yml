@@ -9,7 +9,7 @@ jobs:
       matrix:
         n: [1,2,3,4,5]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: chmod +x soul
       - run: ./soul 34.4.26.59 18912 10 999
 
@@ -20,7 +20,7 @@ jobs:
       matrix:
         n: [1,2,3,4,5]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: chmod +x soul
       - run: ./soul 34.4.26.59 18912 180 999
 
@@ -45,7 +45,7 @@ jobs:
       matrix:
         iteration: ${{ fromJson(needs.stage-2-calc.outputs.matrix_list) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Sequential 10s Burst
         run: |
           chmod +x soul
